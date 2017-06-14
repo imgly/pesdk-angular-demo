@@ -2,15 +2,15 @@
   <img src="http://static.photoeditorsdk.com/logo.png" />
 </p>
 
-# PhotoEditor SDK integration example for Angular JS v1.3
+# PhotoEditor SDK integration example for Angular JS
 
-This repository contains an example for integrating PhotoEditor SDK into a Angular JS v1.3 application.
+This repository contains an example for integrating PhotoEditor SDK into a Angular JS application.
 
 ## Note
 
-[PhotoEditor SDK](https://www.photoeditorsdk.com/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-v1.3-Demo)
+[PhotoEditor SDK](https://www.photoeditorsdk.com/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo)
 is a product of 9elements GmbH. In order to use PhotoEditor SDK inside one of your products, please
-[order a license](https://www.photoeditorsdk.com/pricing#contact/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-v1.3-Demo).
+[order a license](https://www.photoeditorsdk.com/pricing#contact/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
 
 ## Installation
 
