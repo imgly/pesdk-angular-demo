@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { NguiReactModule } from '@ngui/react';
 import { AppComponent } from './app.component';
 
 
@@ -10,7 +9,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, NguiReactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
