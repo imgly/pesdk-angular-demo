@@ -4,11 +4,13 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import routing from './app.config';
 import home from './features/home';
-import pesdk from './components/pesdk'
+import photoeditorsdkreactui from './components/photoeditorsdk-reactui'
+import photoeditorsdkdesktopui from './components/photoeditorsdk-desktopui'
+
 
 try {
     angular
-      .module('app', [uirouter, home, pesdk])
+      .module('app', [uirouter, home, photoeditorsdkreactui, photoeditorsdkdesktopui])
       .config(routing);
 }
 catch(e) {

@@ -7,7 +7,7 @@ let license = 'YOURLICENSEFILE'
 
 
 // the PhotoEditorSDK expects React and ReactDom to be available in global/window
-import * as React from 'react';
+import * as React from 'react'
 import * as ReactDom from 'react-dom'
 
 declare global {
