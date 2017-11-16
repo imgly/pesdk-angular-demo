@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { NguiReactModule } from '@ngui/react';
 import { AppComponent } from './app.component';
 // components
-import { PhotoEditorReactUIComponent } from './components/pesdk.component'
+import { PhotoEditorSDKDesktopUIComponent } from './components/pesdk-desktopui.component'
+import { PhotoEditorSDKReactUIComponent } from './components/pesdk-reactui.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoEditorReactUIComponent // Add PhotoEditorSD
+    PhotoEditorSDKReactUIComponent, // Add PhotoEditorSDK React UI
+    PhotoEditorSDKDesktopUIComponent // Add PhotoEditorSDK Desktop UI
   ],
   imports: [
     BrowserModule,
