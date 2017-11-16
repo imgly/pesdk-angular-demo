@@ -12,7 +12,7 @@ This repository contains an example for integrating PhotoEditor SDK into a Angul
 is a product of 9elements GmbH. In order to use PhotoEditor SDK inside one of your products, please
 [order a license](https://www.photoeditorsdk.com/pricing#contact/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
 
-## Installation
+## Installation v1.3
 
 Clone the repository, inside the cloned repository run:
 
@@ -21,6 +21,16 @@ Clone the repository, inside the cloned repository run:
 
 Afterwards, run `npm start or yarn start` to compile the application and run a web server. Go to
 `http://localhost:8080/` to see the example in action.
+
+## Installation v2.0
+
+Clone the repository, inside the cloned repository run:
+
+`npm install or yarn install`
+
+
+Afterwards, run `ng serve --open` to compile the application and run a web server.
+
 
 ## License
 
