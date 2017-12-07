@@ -1,6 +1,6 @@
 {
   "name": "pesdk-angular-v1.3-demo",
-  "version": "4.0.3",
+  "version": "4.1.2",
   "description": "PhotoEditor SDK integration example for AngularJS 1.3",
   "main": "index.js",
   "author": "PhotoEditor SDK <contact@photoeditorsdk.com>",
