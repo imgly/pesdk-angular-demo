@@ -1,5 +1,5 @@
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import uirouter from '@uirouter/angularjs';
 
 import routing from './home.routes';
 import HomeController from './home.controller';

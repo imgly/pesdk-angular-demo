@@ -1,7 +1,7 @@
 
 // Angular specific part
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import uirouter from '@uirouter/angularjs';
 import routing from './app.config';
 import home from './features/home';
 import photoeditorsdkreactui from './components/photoeditorsdk-reactui'
