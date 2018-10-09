@@ -1,3 +1,3 @@
 export default {
-  license: 'YOURLICENSE'
+  license: null
 }

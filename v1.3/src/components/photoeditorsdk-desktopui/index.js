@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import PhotoEditorDesktopUI from 'photoeditorsdk/js/PhotoEditorSDK.UI.DesktopUI.js';
 import 'photoeditorsdk/css/PhotoEditorSDK.UI.DesktopUI.css'
 import globals from  '../../globals'
@@ -8,12 +7,6 @@ let license = globals.license
 
 // use react2angular for simplicity
 import { react2angular } from 'react2angular';
-
-
-window.React = window.React || React
-window.ReactDom = window.ReactDom || ReactDom
-
-
 
 class NgPhotoEditorSDKDemo extends React.Component {
   render() {

@@ -3,26 +3,17 @@ import {ViewEncapsulation} from '@angular/core'; //required for external css
 // Import PhotoEditor SDK React
 import PhotoEditorReactUI from 'photoeditorsdk/js/PhotoEditorSDK.UI.ReactUI.js';
 
-const license = 'YOURLICENSEFILE'
+const license = null;
 
 
 // the PhotoEditorSDK expects React and ReactDom to be available in global/window
 import * as React from 'react';
-import * as ReactDom from 'react-dom'
 
-declare global {
-  interface Window { React: any; ReactDom: any; }
-}
+const image = new Image();
+image.src = 'assets/example.jpg';
 
-window.React = window.React || React
-window.ReactDom = window.ReactDom || ReactDom
-
-
-let image = new Image()
-image.src = 'assets/example.jpg'
-
-let defaultProps = {
-  license: license,
+const defaultProps = {
+  // license: license,
   assets: {
     baseUrl: '/assets/photoeditorsdk' // see angular-cli.json for configuraton
   },
@@ -33,9 +24,9 @@ let defaultProps = {
   editor: {
     image: image
   }
-}
+};
 
-let templateStr: string = `
+const templateStr: string = `
   <ngui-react
     [reactComponent]="reactComponent"
     [reactProps]="reactProps">
@@ -50,18 +41,18 @@ let templateStr: string = `
 })
 
 export class PhotoEditorSDKReactUIComponent {
- //members
- reactComponent: React.Component
+ // members
+ reactComponent: React.Component;
  reactProps: any
- //inputs
+ // inputs
  @Input() license: string = license;
- //functions
+ // functions
  constructor() {
-   let licenseProps = {
+   const licenseProps = {
      license: this.license
-   }
+   };
 
     this.reactComponent = PhotoEditorReactUI.ReactComponent; // use the react Component
-    this.reactProps = {...defaultProps, ...licenseProps}
+    this.reactProps = {...defaultProps, ...licenseProps};
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PhotoEditorReactUI from 'photoeditorsdk/js/PhotoEditorSDK.UI.ReactUI.js';
 import 'photoeditorsdk/css/PhotoEditorSDK.UI.ReactUI.css'
 import globals from  '../../globals'
