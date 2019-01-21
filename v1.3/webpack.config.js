@@ -5,7 +5,7 @@ var destination = 'build'
 var source = 'src'
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   watch: env === 'development',
@@ -24,16 +24,18 @@ module.exports = {
         template: './public/index.html',
         inject: 'body'
       }),
-    new ExtractTextPlugin("styles.css")
+    new MiniCssExtractPlugin({
+      filename: "styles.css"
+    })
     ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: [
+          MiniCssExtractPlugin.loader || 'style-loader',
+          'css-loader'
+        ]
       },
       {
         test: /\.html$/,
