@@ -3,7 +3,7 @@
   "version": "4.15.1",
   "description": "PhotoEditor SDK integration example for AngularJS 1.3",
   "main": "index.js",
-  "author": "PhotoEditor SDK <contact@photoeditorsdk.com>",
+  "author": "imgly GmbH <contact@img.ly>",
   "scripts": {
     "start": "webpack-dev-server --content-base ."
   },
