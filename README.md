@@ -9,7 +9,7 @@ This repository contains an example for integrating PhotoEditor SDK into a Angul
 ## Note
 
 [PhotoEditor SDK](https://www.photoeditorsdk.com/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo)
-is a product of 9elements GmbH. In order to use PhotoEditor SDK inside one of your products, please
+is a product of img.ly GmbH. In order to use PhotoEditor SDK inside one of your products, please
 [order a license](https://www.photoeditorsdk.com/pricing#contact/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
 
 ## Installation v1.3
@@ -38,7 +38,7 @@ Please see [LICENSE](LICENSE.md) for licensing details.
 
 ## Authors and Contributors
 
-Made 2013-2017 by @9elements.
+Made 2013-2019 by img.ly.
 
 ## Support or Contact
 Use our [service desk](http://support.photoeditorsdk.com) for bug reports or support requests. To request a commercial license, please use the [license request form](https://www.photoeditorsdk.com/pricing) on our website.
