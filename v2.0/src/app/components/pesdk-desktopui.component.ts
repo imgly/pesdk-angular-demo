@@ -51,7 +51,15 @@ export class PhotoEditorSDKDesktopUIComponent {
       license: this.license
     };
 
+    const eventCallback = {
+      ref: component => {
+        component.ui.on('export', img => {
+          console.log("Exported");
+        })
+      }
+    };
+
     this.reactComponent = PhotoEditorDesktopUI.ReactComponent; // use the react Component
-    this.reactProps = {...defaultProps, ...licenseProps};
+    this.reactProps = {...defaultProps, ...licenseProps, ...eventCallback};
   }
 }

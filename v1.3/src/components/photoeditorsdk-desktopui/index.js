@@ -9,6 +9,7 @@ let license = globals.license
 import { react2angular } from 'react2angular';
 
 class NgPhotoEditorSDKDemo extends React.Component {
+
   render() {
     let image = new Image()
     image.src = 'assets/example.jpg'
@@ -27,7 +28,12 @@ class NgPhotoEditorSDKDemo extends React.Component {
           style={{
             width: 1024,
             height: 568
-          }}>
+          }}
+          ref={editor =>
+            editor.ui.on('export', img => {
+              console.log("Exported")
+            })
+          }>
         </ReactComponent>)
   }
 }
