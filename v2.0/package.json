@@ -1,6 +1,6 @@
 {
   "name": "pesdk-angular-v2.0-demo",
-  "version": "4.18.4",
+  "version": "4.18.5",
   "description": "PhotoEditor SDK integration example for AngularJS 1.3",
   "main": "index.js",
   "author": "img.ly GmbH <contact@img.ly>",
@@ -45,7 +45,7 @@
     "karma-coverage-istanbul-reporter": "^2.0.4",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^1.3.1",
-    "photoeditorsdk": "^4.18.4",
+    "photoeditorsdk": "^4.18.5",
     "protractor": "^5.4.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
