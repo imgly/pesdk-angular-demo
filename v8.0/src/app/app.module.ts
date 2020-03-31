@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ReactRendererComponent } from './components/react-renderer.component';
+import { PhotoEditorComponent } from './components/photo-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactRendererComponent,
+    PhotoEditorComponent,
   ],
   imports: [BrowserModule],
   providers: [],
