@@ -31,6 +31,13 @@ Clone the repository, inside the cloned repository run:
 
 Afterwards, run `ng serve --open` to compile the application and run a web server.
 
+## Installation v8.0
+
+Clone the repository, inse the cloned repository run:
+
+`npm install` or `yarn install`
+
+Afterwards, run `npm run start` to compile the application and run a web server.
 
 ## License
 
