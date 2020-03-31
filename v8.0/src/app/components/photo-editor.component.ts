@@ -16,7 +16,7 @@ declare global {
 window.React = window.React || React;
 window.ReactDom = window.ReactDom || ReactDom;
 
-const license = "license goes here";
+const license = "";
 
 @Component({
   selector: "app-photo-editor",
