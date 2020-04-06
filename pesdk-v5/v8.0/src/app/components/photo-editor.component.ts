@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from "@angular/core";
+import { Component, AfterViewInit, ViewChild, Input } from "@angular/core";
 // @ts-ignore
 import { PhotoEditorSDKUI } from "photoeditorsdk";
 
@@ -22,7 +22,7 @@ const license = "";
   selector: "app-photo-editor",
   templateUrl: "./photo-editor.component.html",
 })
-export class PhotoEditorComponent implements OnInit {
+export class PhotoEditorComponent implements AfterViewInit {
   constructor() {}
 
   @Input() src: string;
@@ -30,8 +30,8 @@ export class PhotoEditorComponent implements OnInit {
 
   editor;
 
-  ngOnInit() {
-    this.instantiateEditor.bind(this);
+  ngAfterViewInit() {
+    this.instantiateEditor();
   }
 
   async instantiateEditor() {
