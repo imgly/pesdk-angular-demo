@@ -20,7 +20,7 @@ const license = "";
 
 @Component({
   selector: "app-photo-editor",
-  templateUrl: "./photo-editor.component.html"
+  templateUrl: "./photo-editor.component.html",
 })
 export class PhotoEditorComponent implements OnInit {
   constructor() {}
@@ -28,21 +28,22 @@ export class PhotoEditorComponent implements OnInit {
   @Input() src: string;
   @ViewChild("psdkContainer", { static: false }) container;
 
-  image = new Image();
   editor;
 
   ngOnInit() {
-    this.image.crossOrigin = "anonymous";
-    this.image.onload = this.instantiateEditor.bind(this);
-    this.image.src = this.src;
+    this.instantiateEditor.bind(this);
   }
 
   async instantiateEditor() {
-    this.editor = await new PhotoEditorSDKUI.init({
-      license,
-      container: this.container.nativeElement,
-      image: this.image,
-      assetBaseUrl: "/assets/photoeditorsdk"
-    });
+    try {
+      this.editor = await PhotoEditorSDKUI.init({
+        license,
+        container: this.container.nativeElement,
+        image: this.src,
+        assetBaseUrl: "/assets/photoeditorsdk",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

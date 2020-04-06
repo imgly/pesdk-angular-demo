@@ -12,13 +12,13 @@ This repository contains an example for integrating PhotoEditor SDK into a Angul
 is a product of img.ly GmbH. In order to use PhotoEditor SDK inside one of your products, please
 [request a license](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
 
-## Installation PhotoEditor SDK v5
+## Installation v8.0
 
-refer to [pesdk-v5](https://github.com/imgly/pesdk-angular-demo/tree/master/pesdk-v5)
+Clone the repository, inse the cloned repository run:
 
-## Installation PhotoEditor SDK v4
+`npm install` or `yarn install`
 
-refer to [pesdk-v4](https://github.com/imgly/pesdk-angular-demo/tree/master/pesdk-v4)
+Afterwards, run `npm run start` to compile the application and run a web server.
 
 ## License
 
@@ -26,7 +26,7 @@ Please see [LICENSE](LICENSE.md) for licensing details.
 
 ## Authors and Contributors
 
-Made 2013-2019 by img.ly.
+Made 2013-2020 by img.ly.
 
 ## Support or Contact
 Use our [service desk](http://support.photoeditorsdk.com) for bug reports or support requests. To request a commercial license, please use the [license request form](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo) on our website.

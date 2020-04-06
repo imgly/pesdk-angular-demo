@@ -62,7 +62,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * APPLICATION IMPORTS
  */
 
-//  TODO: remove
 (window as any).process = {
   env: { DEBUG: undefined },
 };
