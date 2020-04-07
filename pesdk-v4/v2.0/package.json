@@ -1,6 +1,6 @@
 {
   "name": "pesdk-angular-v2.0-demo",
-  "version": "4.22.3",
+  "version": "4.23.0",
   "description": "PhotoEditor SDK integration example for AngularJS 1.3",
   "main": "index.js",
   "author": "img.ly GmbH <contact@img.ly>",
