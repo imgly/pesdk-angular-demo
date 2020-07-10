@@ -1,20 +1,5 @@
-import { Component, AfterViewInit, ViewChild, Input } from "@angular/core";
-// @ts-ignore
-import { PhotoEditorSDKUI } from "photoeditorsdk";
-
-/* React Magic */
-import * as React from "react";
-import * as ReactDom from "react-dom";
-
-declare global {
-  interface Window {
-    React: any;
-    ReactDom: any;
-  }
-}
-
-window.React = window.React || React;
-window.ReactDom = window.ReactDom || ReactDom;
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core'
+import { EditorApi, PhotoEditorSDKUI } from 'photoeditorsdk/no-polyfills'
 
 const license = "";
 
@@ -23,12 +8,13 @@ const license = "";
   templateUrl: "./photo-editor.component.html",
 })
 export class PhotoEditorComponent implements AfterViewInit {
-  constructor() {}
+  @Input()
+  public src: string;
 
-  @Input() src: string;
-  @ViewChild("psdkContainer", { static: false }) container;
+  @ViewChild("psdkContainer", { static: false })
+  private container: ElementRef<HTMLDivElement>;
 
-  editor;
+  public editor: EditorApi;
 
   ngAfterViewInit() {
     this.instantiateEditor();
