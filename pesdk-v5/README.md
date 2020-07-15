@@ -2,9 +2,9 @@
   <img src="http://static.photoeditorsdk.com/logo.png" />
 </p>
 
-# PhotoEditor SDK integration example for Angular JS
+# PhotoEditor SDK integration example for Angular
 
-This repository contains an example for integrating PhotoEditor SDK into a Angular JS application.
+This repository contains an example for integrating PhotoEditor SDK into a Angular application.
 
 ## Note
 
@@ -20,6 +20,24 @@ Clone the repository, inse the cloned repository run:
 
 Afterwards, run `npm run start` to compile the application and run a web server.
 
+## Internet Explorer 11 support
+
+To enable IE 11 support, add these Polyfill imports **at the top** of `src/index.tsx`, before all other imports:
+
+```typescript
+import 'react-app-polyfill/ie11'
+import 'react-app-polyfill/stable'
+```
+
+Then, in `src/App.tsx`, change the imports `from 'photoeditorsdk'` to `from 'photoeditorsdk/no-polyfills'`:
+
+```
+import { Configuration, EditorApi, PhotoEditorSDKUI } from 'photoeditorsdk/no-polyfills'
+import { deepmergeAll } from 'photoeditorsdk/no-polyfills'
+```
+
+See [Create React App: Supported Browsers and Features](https://create-react-app.dev/docs/supported-browsers-features/) and [react-app-polyfill](https://github.com/facebook/create-react-app/blob/master/packages/react-app-polyfill/README.md).
+
 ## License
 
 Please see [LICENSE](LICENSE.md) for licensing details.
@@ -29,4 +47,5 @@ Please see [LICENSE](LICENSE.md) for licensing details.
 Made 2013-2020 by img.ly.
 
 ## Support or Contact
+
 Use our [service desk](http://support.photoeditorsdk.com) for bug reports or support requests. To request a commercial license, please use the [license request form](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo) on our website.
