@@ -38,7 +38,5 @@ export class PhotoEditorComponent implements AfterViewInit {
       deepmergeAll([defaultConfig, config])
     )
     this.editor = editor
-    // @ts-ignore this is for the cypress test
-    window.editor = editor
   }
 }
