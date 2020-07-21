@@ -20,7 +20,8 @@ export class PhotoEditorComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.initEditor();
-    // Make the value global for the Cypress E2E test
+    // Make the value global for the Cypress end-to-end (E2E) test.
+    // This is not necessary for the PhotoEditorSDK to work and can be removed safely.
     (window as any).initPesdk = this.initEditor.bind(this);
   }
 
@@ -38,7 +39,9 @@ export class PhotoEditorComponent implements AfterViewInit {
       deepmergeAll([defaultConfig, config])
     );
     this.editor = editor;
-    // Make the value global for the Cypress E2E test
+
+    // Make the value global for the Cypress end-to-end (E2E) test.
+    // This is not necessary for the PhotoEditorSDK to work and can be removed safely.
     (window as any).pesdkEditor = editor;
   }
 }
