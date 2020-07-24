@@ -1,20 +1,7 @@
-import { Component, AfterViewInit, ViewChild, Input } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core'
 // @ts-ignore
-import { PhotoEditorSDKUI } from "photoeditorsdk";
-
-/* React Magic */
-import * as React from "react";
-import * as ReactDom from "react-dom";
-
-declare global {
-  interface Window {
-    React: any;
-    ReactDom: any;
-  }
-}
-
-window.React = window.React || React;
-window.ReactDom = window.ReactDom || ReactDom;
+import { deepmergeAll, Configuration } from 'photoeditorsdk/no-polyfills'
+import { EditorApi, PhotoEditorSDKUI } from 'photoeditorsdk/no-polyfills'
 
 const license = "";
 
@@ -23,27 +10,38 @@ const license = "";
   templateUrl: "./photo-editor.component.html",
 })
 export class PhotoEditorComponent implements AfterViewInit {
-  constructor() {}
+  @Input()
+  public src: string;
 
-  @Input() src: string;
-  @ViewChild("psdkContainer", { static: false }) container;
+  @ViewChild("psdkContainer", { static: false })
+  private container: ElementRef<HTMLDivElement>;
 
-  editor;
+  public editor: EditorApi;
 
   ngAfterViewInit() {
-    this.instantiateEditor();
+    this.initEditor();
+    // Make the value global for the Cypress end-to-end (E2E) test.
+    // This is not necessary for the PhotoEditorSDK to work and can be removed safely.
+    (window as any).initPesdk = this.initEditor.bind(this);
   }
 
-  async instantiateEditor() {
-    try {
-      this.editor = await PhotoEditorSDKUI.init({
-        license,
-        container: this.container.nativeElement,
-        image: this.src,
-        assetBaseUrl: "/assets/photoeditorsdk",
-      });
-    } catch (error) {
-      console.log(error);
+  async initEditor(config: Partial<Configuration> = {}) {
+    if (this.editor) {
+      this.editor.dispose();
     }
+    const defaultConfig: Configuration = {
+      license,
+      container: this.container.nativeElement,
+      image: this.src,
+      assetBaseUrl: "/assets/photoeditorsdk",
+    };
+    const editor = await PhotoEditorSDKUI.init(
+      deepmergeAll([defaultConfig, config])
+    );
+    this.editor = editor;
+
+    // Make the value global for the Cypress end-to-end (E2E) test.
+    // This is not necessary for the PhotoEditorSDK to work and can be removed safely.
+    (window as any).pesdkEditor = editor;
   }
 }
