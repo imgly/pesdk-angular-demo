@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://static.photoeditorsdk.com/logo.png" />
+  <img src="https://img.ly/static/logos/PE.SDK_Logo.svg" />
 </p>
 
 # PhotoEditor SDK integration example for Angular
@@ -8,9 +8,9 @@ This repository contains an example for integrating PhotoEditor SDK into a Angul
 
 ## Note
 
-[PhotoEditor SDK](https://www.photoeditorsdk.com/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo)
+[PhotoEditor SDK](https://img.ly/photo-sdk/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo)
 is a product of img.ly GmbH. In order to use PhotoEditor SDK inside one of your products, please
-[request a license](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
+[request a license](https://img.ly/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo).
 
 ## Installation v8.0
 
@@ -48,4 +48,4 @@ Made 2013-2020 by img.ly.
 
 ## Support or Contact
 
-Use our [service desk](http://support.photoeditorsdk.com) for bug reports or support requests. To request a commercial license, please use the [license request form](https://account.photoeditorsdk.com/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo) on our website.
+Use our [service desk](https://support.img.ly) for bug reports or support requests. To request a commercial license, please use the [license request form](https://img.ly/pricing/?utm_campaign=Projects&utm_source=Github&utm_medium=Side_Projects&utm_content=Angular-Demo) on our website.
